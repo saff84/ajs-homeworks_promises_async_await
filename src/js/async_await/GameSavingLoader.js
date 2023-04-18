@@ -1,5 +1,5 @@
-import read from './read';
-import json from './json';
+import read from './reader';
+import json from './parser';
 
 export default class GameSavingLoader {
   static async load() {

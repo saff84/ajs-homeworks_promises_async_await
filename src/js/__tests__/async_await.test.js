@@ -1,11 +1,6 @@
 import GameSavingLoader from '../async_await/GameSavingLoader';
 
-test('class "GameSavingLoader" exists and has "load" method', () => {
-  expect(GameSavingLoader).toBeDefined();
-  expect(GameSavingLoader.load).toBeDefined();
-});
-
-test('"load" method of class "GameSavingLoader" works correctly', async () => {
+test('Проверка GameSavingLoader', async () => {
   const expectation = {
     id: 9,
     created: 1546300800,

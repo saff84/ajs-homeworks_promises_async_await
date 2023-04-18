@@ -1,11 +1,6 @@
 import GameSavingLoader from '../Promises/GameSavingLoader';
 
-test('class "GameSavingLoader" exists and has "load" method', () => {
-  expect(GameSavingLoader).toBeDefined();
-  expect(GameSavingLoader.load).toBeDefined();
-});
-
-test('"load" method of class "GameSavingLoader" works correctly', () => {
+test('Проверка GameSavingLoader', (done) => {
   const expectation = {
     id: 9,
     created: 1546300800,
@@ -17,7 +12,8 @@ test('"load" method of class "GameSavingLoader" works correctly', () => {
     },
   };
 
-  return GameSavingLoader.load().then((saving) => {
+  GameSavingLoader.load().then((saving) => {
     expect(saving).toEqual(expectation);
+    done();
   });
 });
